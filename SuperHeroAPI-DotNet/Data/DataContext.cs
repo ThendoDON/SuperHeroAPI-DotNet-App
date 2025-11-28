@@ -1,0 +1,16 @@
+﻿using Microsoft.EntityFrameworkCore;
+using SuperHeroAPI_DotNet.Entities;
+
+namespace SuperHeroAPI_DotNet.Data
+{
+    public class DataContext : DbContext
+    {
+        public DataContext(DbContextOptions<DataContext> options) : base(options)
+        { 
+            
+        
+        }
+
+        public DbSet<SuperHero> SuperHeroes { get; set; }
+    }
+}
